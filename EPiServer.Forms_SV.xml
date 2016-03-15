@@ -26,12 +26,10 @@
           <name>Inskickade formulär</name>
           <description>Visa inskickade formulär</description>
           <heading>Inskickade formulär</heading>
-
           <begindate>Från datum</begindate>
           <enddate>Till datum</enddate>
           <search>Sök</search>
           <nodata>Ingen data hittades</nodata>
-
           <export>Exportera som ...</export>
           <exportasxml>XML</exportasxml>
           <exportasxmldesc>Exportera formulär data i XML-format</exportasxmldesc>
