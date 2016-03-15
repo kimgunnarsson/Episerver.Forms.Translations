@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<languages>
+  <language name="Svenska" id="sv">
+    <episerver>
+      <forms>
+        <contenttypescomponent>
+          <title>Formulärelement</title>
+          <description>Visa alla innehållstyper från EPiServer forms</description>
+        </contenttypescomponent>
+        <formscomponent>
+          <title>Formulär</title>
+          <description>Hantera formulär för webbplatsen</description>
+          <command>
+            <create>
+              <label>Nytt formulär</label>
+            </create>
+            <viewdata>
+              <label see="/episerver/forms/formdataview/name" />
+            </viewdata>
+          </command>
+          <messages>
+            <nocontent>Den här mappen innehåller inga formulär</nocontent>
+          </messages>
+        </formscomponent>
+        <formdataview>
+          <name>Inskickade formulär</name>
+          <description>Visa inskickade formulär</description>
+          <heading>Inskickade formulär</heading>
+
+          <begindate>Från datum</begindate>
+          <enddate>Till datum</enddate>
+          <search>Sök</search>
+          <nodata>Ingen data hittades</nodata>
+
+          <export>Exportera som ...</export>
+          <exportasxml>XML</exportasxml>
+          <exportasxmldesc>Exportera formulär data i XML-format</exportasxmldesc>
+          <exportascsv>CSV</exportascsv>
+          <exportascsvdesc>Exportera formulär data i CSV-format</exportascsvdesc>
+          <exportasjson>JSON</exportasjson>
+          <exportasjsondesc>Exportera formulär data i JSON-format</exportasjsondesc>
+          <deleteselecteditems>Ta bort</deleteselecteditems>
+          <deleteconfirmation>Vill du ta bort de markerade posterna?</deleteconfirmation>
+
+          <accessdenied>Du har inte behörighet att se det här datat.</accessdenied>
+
+          <submittime>Tid</submittime>
+          <submituser>Per användare</submituser>
+          <hostedpage>Inskickad från</hostedpage>
+          <finalizedsubmission>Slutförda</finalizedsubmission>
+        </formdataview>
+        <formscontentarea>
+          <emptyactions>
+            <actions>
+              <createnewformselement>bläddra</createnewformselement>
+            </actions>
+            <template>Du kan släppa formulärelement här eller {createnewformselement}.</template>
+            <templatewithoutcreate>Du kan släppa innehål här.</templatewithoutcreate>
+          </emptyactions>
+        </formscontentarea>
+        <fieldselector>
+          <title>Välj beroende fält</title>
+        </fieldselector>
+        <submissionactors>
+          <episerver.forms.implementation.actors.callwebhookaftersubmissionactor>
+            <displayname>Anropa en webbadress efter inskick</displayname>
+          </episerver.forms.implementation.actors.callwebhookaftersubmissionactor>
+          <episerver.forms.implementation.actors.sendemailaftersubmissionactor>
+            <displayname>Skicka e-post efter inskick</displayname>
+          </episerver.forms.implementation.actors.sendemailaftersubmissionactor>
+        </submissionactors>
+        <validators>
+          <episerver.forms.implementation.validation.requiredvalidator>
+            <displayname>Obligatoriskt</displayname>
+            <message>Det här fältet är obligatoriskt.</message>
+          </episerver.forms.implementation.validation.requiredvalidator>
+          <episerver.forms.implementation.validation.regularexpressionvalidator>
+            <displayname>Regular expression/Reguljärt uttryck</displayname>
+            <message>Det här fältet borde vara i formatet "{0}".</message>
+          </episerver.forms.implementation.validation.regularexpressionvalidator>
+          <episerver.forms.implementation.validation.captchavalidator>
+            <displayname>Captcha</displayname>
+            <message>Skriv in tecknen som du ser i bilden.</message>
+          </episerver.forms.implementation.validation.captchavalidator>
+          <episerver.forms.implementation.validation.allowedextensionsvalidator>
+            <displayname>Tillåtna filändelser</displayname>
+            <message>Det uppladdade filformatet är inte giltigt eller stöds inte.</message>
+            <allowedextensionsmessage>Det uppladdade filformatet är inte giltigt eller stöds inte. Filformatet ska vara: {0}.</allowedextensionsmessage>
+          </episerver.forms.implementation.validation.allowedextensionsvalidator>
+          <episerver.forms.implementation.validation.maxfilesizevalidator>
+            <displayname>Max. filstorlek</displayname>
+            <message see="/episerver/forms/messages/fileupload/overfilesize" />
+          </episerver.forms.implementation.validation.maxfilesizevalidator>
+          <episerver.forms.implementation.validation.emailvalidator>
+            <displayname>E-post</displayname>
+            <message>Ange en giltig e-postadress.</message>
+          </episerver.forms.implementation.validation.emailvalidator>
+          <episerver.forms.implementation.validation.urlvalidator>
+            <displayname>Url</displayname>
+            <message>Ange en giltig URL.</message>
+          </episerver.forms.implementation.validation.urlvalidator>
+
+          <episerver.forms.implementation.validation.dateddmmyyyyvalidator>
+            <displayname>Datum (DD/MM/YYYY)</displayname>
+            <message>Ange ett datum med formatteringen DD/MM/YYYY.</message>
+          </episerver.forms.implementation.validation.dateddmmyyyyvalidator>
+          <episerver.forms.implementation.validation.datemmddyyyyvalidator>
+            <displayname>Datum (MM/DD/YYYY)</displayname>
+            <message>Ange ett datum med formatteringen MM/DD/YYYY.</message>
+          </episerver.forms.implementation.validation.datemmddyyyyvalidator>
+          <episerver.forms.implementation.validation.dateyyyymmddvalidator>
+            <displayname>Datum (YYYY-MM-DD)</displayname>
+            <message>Ange ett datum med formatteringen YYYY-MM-DD.</message>
+          </episerver.forms.implementation.validation.dateyyyymmddvalidator>
+
+          <episerver.forms.implementation.validation.integervalidator>
+            <displayname>Heltal</displayname>
+            <message>Ange ett giltigt heltal.</message>
+          </episerver.forms.implementation.validation.integervalidator>
+          <episerver.forms.implementation.validation.positiveintegervalidator>
+            <displayname>Positivt heltal</displayname>
+            <message>Ange ett giltigt positivt heltal.</message>
+          </episerver.forms.implementation.validation.positiveintegervalidator>
+
+          <elementselfvalidator>
+            <unexpectedvalueisnotaccepted>Oväntat värde är inte tillåtet.</unexpectedvalueisnotaccepted>
+          </elementselfvalidator>
+
+        </validators>
+        <visitordatasources>
+          <episerver.forms.implementation.visitordata.ipaddressvisitordatasource>
+            <displayname>IP adress</displayname>
+          </episerver.forms.implementation.visitordata.ipaddressvisitordatasource>
+          <episerver.forms.implementation.visitordata.geovisitordatasource>
+            <displayname>Geo</displayname>
+            <properties>
+              <city>Ort</city>
+              <country_code>Landskod</country_code>
+              <country_name>Landsnamn</country_name>
+              <ip>IP</ip>
+              <latitude>Latitud</latitude>
+              <longitude>Longitud</longitude>
+              <metro_code>Metro code (US metropolitan region code)</metro_code>
+              <region_code>Regionkod</region_code>
+              <region_name>Regionamn</region_name>
+              <time_zone>Tidszon</time_zone>
+              <zip_code>Postnummer</zip_code>
+            </properties>
+          </episerver.forms.implementation.visitordata.geovisitordatasource>
+          <episerver.forms.implementation.visitordata.profilevisitordatasource>
+            <displayname>Profil</displayname>
+            <properties>
+              <address>Adress</address>
+              <zipcode>Postnummer</zipcode>
+              <locality>Område</locality>
+              <email>E-post</email>
+              <firstname>Förnamn</firstname>
+              <lastname>Efternamn</lastname>
+              <language>Språk</language>
+              <country>Land</country>
+              <company>Företag</company>
+              <title>Titel</title>
+            </properties>
+          </episerver.forms.implementation.visitordata.profilevisitordatasource>
+          <episerver.forms.implementation.visitordata.useragentvisitordatasource>
+            <displayname>Webbläsare</displayname>
+            <properties>
+              <ismobiledevice>Är mobil</ismobiledevice>
+              <useragent>Webbläsare</useragent>
+            </properties>
+          </episerver.forms.implementation.visitordata.useragentvisitordatasource>
+          <episerver.forms.implementation.visitordata.visitorgroupvisitordatasource>
+            <displayname>Besökargrupp</displayname>
+            <properties>
+              <id>Id</id>
+              <name>Namn</name>
+            </properties>
+          </episerver.forms.implementation.visitordata.visitorgroupvisitordatasource>
+        </visitordatasources>
+
+        <messages>
+          <fileupload>
+            <overfilesize>Den uppladdade filstorleken får inte vara större än {0} MB.</overfilesize>
+            <invalidfiletype>Det uppladdade filformatet är inte giltigt eller stöds ej.</invalidfiletype>
+            <postedfile>(Tidigare postad fil - {0})</postedfile>
+          </fileupload>
+          <formsubmission>
+            <outdatedforminit>Din session för att se det här formuläret har gått ut. Uppdatera sidan för att fortsätta.</outdatedforminit>
+            <requirelogin>Du måste vara inloggad för att skicka in formuläret.</requirelogin>
+            <denymultisubmit>Du har redan skickat in formuläret.</denymultisubmit>
+            <submitsuccess>Inskickningen lyckades.</submitsuccess>
+            <validationfailformat>Validering misslyckades "{0}" på fältet: {1}</validationfailformat>
+          </formsubmission>
+        </messages>
+        <dependcondition>
+          <notapplicable>Inte applicerbar</notapplicable>
+          <matchregularexpression>Träff med reguljärt uttryck</matchregularexpression>
+          <equals>Lika med</equals>
+          <notequals>Inte lika med</notequals>
+          <contains>Innehåller</contains>
+          <notcontains>Innehåller inte</notcontains>
+        </dependcondition>
+        <imagechoiceitems>
+          <emptyactions>
+            <actions>
+              <createnewitem>Skapa en länk till en bild</createnewitem>
+            </actions>
+            <template>Släpp innehåll här.&lt;br/&gt;Du kan också {createnewitem}.</template>
+          </emptyactions>
+          <menutooltip>Visa meny</menutooltip>
+        </imagechoiceitems>
+        <editview>
+          <notconfigured>Inte konfigurerad än</notconfigured>
+
+          <insertplaceholder>Lägg till placeholder</insertplaceholder>
+          <selectanitem>Välj ett objekt</selectanitem>
+          <externalsystems>Mappning mot fält i externt system</externalsystems>
+          <createemailtemplate>Skapa e-postmall</createemailtemplate>
+          <editemailtemplate>Redigera e-postmall</editemailtemplate>
+          <addwebhook>Lägg till webbadress</addwebhook>
+          <editwebhook>Redigera webbadress</editwebhook>
+          <selectpage>Välj sida</selectpage>
+          <usemanualinput>Använd manuell inmatning</usemanualinput>
+          <errorconditionalstepcannotcontainrequiredelement>Det här formsteget bör inte vara beroende på andra element på grund av att den innehåller det obligatoriska elementet [{0}].</errorconditionalstepcannotcontainrequiredelement>
+          <cannotbuildformmodel>Kan inte bygga formulärmodellen för rendering. Notera att FormContainerBlock inte kan användas som egenskap.</cannotbuildformmodel>
+        </editview>
+
+        <viewmode>
+          <stepnavigation>
+            <previous>Tidigare steg</previous>
+            <next>Nästa steg</next>
+            <page>Steg</page>
+          </stepnavigation>
+          <untitled>Untitled</untitled>
+          <selection>
+            <selectanoption>-- Välj ett värde --</selectanoption>
+            <selectoptions>-- Välj värden --</selectoptions>
+          </selection>
+          <reset>Återställ formulär</reset>
+          <submit>Skicka</submit>
+          <refreshcaptcha>Uppdatera captcha</refreshcaptcha>
+          <captchalabel>Verifiera ord</captchalabel>
+          <malformstepconfigruation>Felaktig konfiguration av formulärsteg (FormStep). Vissa steg är knutna till sidor, medans andra är inte bundna eller bundna bundna till innehåll utan publik URL.</malformstepconfigruation>
+          <commonvalidationfail>Detta element är inte giltigt.</commonvalidationfail>
+        </viewmode>
+        <contentediting>
+          <optionitem>
+            <caption>Val</caption>
+            <value>Värde</value>
+            <checked>Vald per default</checked>
+            <containsinvalidcharacter>Kommatecken (,) är inte tillåtet.</containsinvalidcharacter>
+          </optionitem>
+          <emailtemplateactor>
+            <fromemail>Från</fromemail>
+            <fromemaildescription>E-postadress att skicka ifrån</fromemaildescription>
+            <toemails>Till</toemails>
+            <toemailsdescription>E-postadress att skicka till, eller namnet på ett fält i formuläret med e-postadressen som innehåll (för bekräftesemeddelanden)</toemailsdescription>
+            <subject>Ämne</subject>
+            <subjectdescription>Ämne för e-postmeddelandet. Du kan använda #FIELDNAME# för att infoga värden från formuläret.</subjectdescription>
+            <body>Meddelande</body>
+            <bodydescription>Innehållet i meddelandet. Du kan använda #FIELDNAME# för att infoga värden från formuläret eller #SUMMARY# för en summering av fältvärden i formuläret.</bodydescription>
+          </emailtemplateactor>
+          <webhookactor>
+            <url>Webbadress</url>
+            <urldescription>Webbadress för att skicka data till; bör vara http eller https.</urldescription>
+            <jsonformat>Posta (POST) data i JSON-format</jsonformat>
+          </webhookactor>
+          <validation>
+            <greaterthanequaltoerrorformat>{0} måste vara &gt;= värdet av {1}.</greaterthanequaltoerrorformat>
+            <lessthanequaltoerrorformat>{0} måste vara &lt;= värdet av {1}.</lessthanequaltoerrorformat>
+            <inrangeerrorformat>"{0}" är inte ett giltigt värde för {1}. Bara nummer är tillåtna och {1} måste vara i spannet mellan [{2} - {3}]s värden.</inrangeerrorformat>
+            <stepinrangeerrorformat>{0} måste vara &gt;= 1 och &lt;= {2} - {1}.</stepinrangeerrorformat>
+            <positiveinteger>Bara positiva heltal är tillåtna.</positiveinteger>
+          </validation>
+        </contentediting>
+      </forms>
+    </episerver>
+
+
+    <contentrepositories>
+      <formscontenttypes>
+        <customselecttitle>Innehållstype för formulär</customselecttitle>
+        <name>Innehållstyper för formulär</name>
+      </formscontenttypes>
+      <forms>
+        <customselecttitle>Formulär</customselecttitle>
+        <name>Formulär</name>
+      </forms>
+    </contentrepositories>
+    <contenttypes>
+      <icontentdata>
+        <properties>
+          <!--InputElementBlockBase-->
+          <validators>
+            <caption>Validatorer</caption>
+            <help>Validatorer för detta element</help>
+          </validators>
+          <!--LabeledElementBlockBase-->
+          <label>
+            <caption>Etikett</caption>
+            <help>Etiketten brevid varje HTML-fält.</help>
+          </label>
+          <placeholder>
+            <caption>Placeholder</caption>
+            <help>Ange en text som du vill visa i fältet för att prompta användaren. Texten sparas inte som data och är ersatt av användarens inmatning.</help>
+          </placeholder>
+          <predefinedvalue>
+            <caption>Fördefinierat värde</caption>
+            <help>Ange ett värde för att visa och spara som standardtext i textrutan. Berökarens värde skriver över denna text. Om du har både en placeholder och ett fördefinierat värde, visas det Fördefinierae värdet i fältet.</help>
+          </predefinedvalue>
+          <!--SelectionElementBlockBase-->
+          <allowmultiselect>
+            <caption>Tillåt flerval</caption>
+            <help>Tillåt flerval</help>
+          </allowmultiselect>
+          <feed>
+            <caption>Val</caption>
+            <help>Välj källa (feed source) för objektet</help>
+          </feed>
+          <items>
+            <caption>Objekt</caption>
+          </items>
+          <sendemailaftersubmissionactor>
+            <caption>Skicka e-post efter inskick</caption>
+          </sendemailaftersubmissionactor>
+          <callwebhookaftersubmissionactor>
+            <caption>Anropa en webbadress efter inskick</caption>
+          </callwebhookaftersubmissionactor>
+        </properties>
+      </icontentdata>
+
+      <blockbase>
+        <create>Nytt formulärselement</create>
+        <newitemdefaultname>Nytt formulärselement</newitemdefaultname>
+
+        <properties>
+          <!--BlockBase-->
+          <description>
+            <caption>Hjälptext</caption>
+            <help>Visas som en 'tooltip' eller hjälptext för ett element</help>
+          </description>
+        </properties>
+      </blockbase>
+
+      <formcontainerblock>
+        <name>Formulärbehållare</name>
+        <description></description>
+        <newitemdefaultname>Ny formulärbehållare</newitemdefaultname>
+        <forthis>För detta formulär</forthis>
+        <properties>
+          <title>
+            <caption>Titel på formulär</caption>
+          </title>
+          <description>
+            <caption>Beskrivning</caption>
+            <help>Visas som beskrivning under formulärets titel.</help>
+          </description>
+          <elementsarea>
+            <caption>Formulärelement</caption>
+          </elementsarea>
+          <allowanonymoussubmission>
+            <caption>Tillåt anonyma postningar</caption>
+            <help>Tillåt att en anonym användare postar ett formulär.</help>
+          </allowanonymoussubmission>
+          <allowmultiplesubmission>
+            <caption>Tillåt flera postningar från samma IP/cookie</caption>
+            <help>Tillåt flera postningar från samma IP/cookie.</help>
+          </allowmultiplesubmission>
+          <allowexposingdatafeeds>
+            <caption>Tillåt access till datan i formuläret via Service APIet</caption>
+            <help>Tillåt en utvecklare (eller annan applikation) att hämta data från formuläret via Forms Service API.</help>
+          </allowexposingdatafeeds>
+          <shownavigationbar>
+            <caption>Visa navigation om formuläret har flera steg</caption>
+            <help>Visa navigation i varje steg om formuläret har flera steg</help>
+          </shownavigationbar>
+          <showsummarizeddata>
+            <caption>Visa en summeringsbekräftelse efter postning</caption>
+            <help>Bekräfta summerad data innan datat sparas.</help>
+          </showsummarizeddata>
+          <confirmationmessage>
+            <caption>Bekräftelsemeddelande</caption>
+            <help>Meddelande som visas innan postning av formuläret.</help>
+          </confirmationmessage>
+          <redirecttopage>
+            <caption>Visa sida efter postning</caption>
+            <help>Välj en sida att visa efter postning av formuläret.</help>
+          </redirecttopage>
+          <submitsuccessmessage>
+            <caption>Visa meddelande efter postning av formuläret (visas inte om besökaren vidarebefordras)</caption>
+            <help>Ange ett meddelande att visa efter postning av formulär, och bara om \"Redirect to page\" är tomt.</help>
+          </submitsuccessmessage>
+          <allowtostoresubmissiondata>
+            <caption>Lagra formulärspostningar</caption>
+            <help>Lagra postningar av formuläret i databasen.</help>
+          </allowtostoresubmissiondata>
+        </properties>
+      </formcontainerblock>
+      <selectionelementblock>
+        <name>Selektering/Urval</name>
+        <description></description>
+        <newitemdefaultname>Ny selektering/Nytt urval</newitemdefaultname>
+        <properties>
+          <description>
+            <caption see="/contenttypes/blockbase/properties/description/caption" />
+            <help see="/contenttypes/blockbase/properties/description/help" />
+          </description>
+        </properties>
+      </selectionelementblock>
+      <imagechoiceelementblock>
+        <name>Bildval</name>
+        <description></description>
+        <newitemdefaultname>Nytt bildval</newitemdefaultname>
+        <properties>
+          <description>
+            <caption see="/contenttypes/blockbase/properties/description/caption" />
+            <help see="/contenttypes/blockbase/properties/description/help" />
+          </description>
+
+          <showselectioninputcontrol>
+            <caption>Visa checkboxen eller radioknappen</caption>
+          </showselectioninputcontrol>
+          <items>
+            <caption>Bildval</caption>
+            <help>Lista med bilder</help>
+          </items>
+        </properties>
+      </imagechoiceelementblock>
+      <textareaelementblock>
+        <name>Textyta</name>
+        <newitemdefaultname>Ny textyta</newitemdefaultname>
+        <properties>
+          <description>
+            <caption see="/contenttypes/blockbase/properties/description/caption" />
+            <help see="/contenttypes/blockbase/properties/description/help" />
+          </description>
+        </properties>
+      </textareaelementblock>
+      <choiceelementblock>
+        <name>Flerval eller enval</name>
+        <description></description>
+        <newitemdefaultname>Ny flerval eller enval</newitemdefaultname>
+        <properties>
+          <description>
+            <caption see="/contenttypes/blockbase/properties/description/caption" />
+            <help see="/contenttypes/blockbase/properties/description/help" />
+          </description>
+        </properties>
+      </choiceelementblock>
+      <captchaelementblock>
+        <name>Captcha</name>
+        <description></description>
+        <newitemdefaultname>Ny captcha</newitemdefaultname>
+        <properties>
+
+          <description>
+            <caption see="/contenttypes/blockbase/properties/description/caption" />
+            <help see="/contenttypes/blockbase/properties/description/help" />
+          </description>
+
+          <imagewidth>
+            <caption>Bredd på bild</caption>
+          </imagewidth>
+          <imageheight>
+            <caption>Höjd på bild</caption>
+          </imageheight>
+          <textlength>
+            <caption>Textlängd</caption>
+          </textlength>
+        </properties>
+      </captchaelementblock>
+      <fileuploadelementblock>
+        <name>Filuppladdning</name>
+        <description></description>
+        <newitemdefaultname>Ny filuppladdning</newitemdefaultname>
+        <properties>
+          <description>
+            <caption see="/contenttypes/blockbase/properties/description/caption" />
+            <help see="/contenttypes/blockbase/properties/description/help" />
+          </description>
+          <filesize>
+            <caption>Största filstorlek (i MB)</caption>
+            <help>Största filstorleken tilltåten (i MB). Standard ör 4MB. För att tillåta filer större än 4MB, modifiera ASP.NET requestLimits.maxAllowedContentLength i web.config.</help>
+          </filesize>
+          <filetypes>
+            <caption>Tillåtna filändelser (jpg, png, pfd, ...)</caption>
+            <help>Ange kommaseparerade filändelser, exempelvis "jpg, png, pdf" och så vidare.</help>
+          </filetypes>
+        </properties>
+      </fileuploadelementblock>
+      <textboxelementblock>
+        <name>Text</name>
+        <description></description>
+        <newitemdefaultname>Ny text</newitemdefaultname>
+        <properties>
+          <description>
+            <caption see="/contenttypes/blockbase/properties/description/caption" />
+            <help see="/contenttypes/blockbase/properties/description/help" />
+          </description>
+        </properties>
+      </textboxelementblock>
+      <predefinedhiddenelementblock>
+        <name>Dolt fördefinierat värde</name>
+        <description></description>
+        <newitemdefaultname>Nytt dolt fördefinierat värde</newitemdefaultname>
+      </predefinedhiddenelementblock>
+      <numberelementblock>
+        <name>Nummer</name>
+        <description></description>
+        <newitemdefaultname>Nytt nummer</newitemdefaultname>
+        <properties>
+          <description>
+            <caption see="/contenttypes/blockbase/properties/description/caption" />
+            <help see="/contenttypes/blockbase/properties/description/help" />
+          </description>
+        </properties>
+      </numberelementblock>
+      <visitordatahiddenelementblock>
+        <name>Dold besökarprofilering</name>
+        <description></description>
+        <newitemdefaultname>Ny dold besökarprofilering</newitemdefaultname>
+        <properties>
+          <visitordatasources>
+            <caption>Samla in besökardata automatiskt</caption>
+            <help>Välj den typ av data du vill samla in från en besökare.</help>
+          </visitordatasources>
+        </properties>
+      </visitordatahiddenelementblock>
+      <feedhiddenelementblock>
+        <name>Dolt feedvärde</name>
+        <description></description>
+        <newitemdefaultname>Nytt dolt feedvärde</newitemdefaultname>
+        <properties>
+          <value>
+            <caption>Värde</caption>
+            <help>Välj värdet på fältet.</help>
+          </value>
+        </properties>
+      </feedhiddenelementblock>
+      <resetbuttonelementblock>
+        <name>Återställningsknapp (reset)</name>
+        <description></description>
+        <newitemdefaultname>Ny återställningsknapp</newitemdefaultname>
+        <properties>
+          <description>
+            <caption see="/contenttypes/blockbase/properties/description/caption" />
+            <help see="/contenttypes/blockbase/properties/description/help" />
+          </description>
+        </properties>
+      </resetbuttonelementblock>
+      <submitbuttonelementblock>
+        <name>Skickaknapp (submit)</name>
+        <description></description>
+        <newitemdefaultname>Ny skickaknapp</newitemdefaultname>
+        <properties>
+          <description>
+            <caption see="/contenttypes/blockbase/properties/description/caption" />
+            <help see="/contenttypes/blockbase/properties/description/help" />
+          </description>
+        </properties>
+      </submitbuttonelementblock>
+      <formstepblock>
+        <name>Formulärsteg</name>
+        <description></description>
+        <newitemdefaultname>Nytt formulärsteg</newitemdefaultname>
+        <properties>
+
+          <label>
+            <caption>Rubrik/Titel för steg</caption>
+            <help>Rubriken för detta formulärsteg</help>
+          </label>
+          <description>
+            <caption>Beskrivning</caption>
+            <help>Visar en beskrivning under rubriken för steget.</help>
+          </description>
+
+          <attachedcontentlink>
+            <caption>Visa steg i annat innehåll</caption>
+            <help>Innehållet som du vill visa steget i måste innehålla formuläret.</help>
+          </attachedcontentlink>
+          <dependfield>
+            <caption>Visa bara om fält</caption>
+            <help>Formulärsfältet som måste matcha följande villkor för att detta steg ska visas.</help>
+          </dependfield>
+          <dependcondition>
+            <caption>värde ...</caption>
+            <help>Villkoret för beroendet</help>
+          </dependcondition>
+          <dependvalue>
+            <caption>följande värde</caption>
+            <help>Värdet på det beroende fältet.</help>
+          </dependvalue>
+        </properties>
+      </formstepblock>
+      <paragraphtextelementblock>
+        <name>Text med placeholders (Rich text)</name>
+        <description></description>
+        <newitemdefaultname>Ny text med placeholders (Rich text)</newitemdefaultname>
+        <properties>
+
+          <description>
+            <caption see="/contenttypes/blockbase/properties/description/caption" />
+            <help see="/contenttypes/blockbase/properties/description/help" />
+          </description>
+
+          <paragraphtext>
+            <caption>Text</caption>
+            <help>Visa text med valda placeholders</help>
+          </paragraphtext>
+        </properties>
+      </paragraphtextelementblock>
+      <urlelementblock>
+        <name>Url</name>
+        <description></description>
+        <newitemdefaultname>Ny Url</newitemdefaultname>
+        <properties>
+          <description>
+            <caption see="/contenttypes/blockbase/properties/description/caption" />
+            <help see="/contenttypes/blockbase/properties/description/help" />
+          </description>
+        </properties>
+      </urlelementblock>
+      <rangeelementblock>
+        <name>Område (Range)</name>
+        <description></description>
+        <newitemdefaultname>Nytt område (Range)</newitemdefaultname>
+        <properties>
+
+          <description>
+            <caption see="/contenttypes/blockbase/properties/description/caption" />
+            <help see="/contenttypes/blockbase/properties/description/help" />
+          </description>
+
+          <predefinedvalue>
+            <help>Ett värde (mellan Min och Max) för att initialt placera knappen på slidern.</help>
+          </predefinedvalue>
+          <step>
+            <caption>Steg</caption>
+          </step>
+        </properties>
+      </rangeelementblock>
+    </contenttypes>
+  </language>
+</languages>
